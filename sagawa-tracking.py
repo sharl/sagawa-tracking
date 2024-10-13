@@ -3,14 +3,11 @@ import sys
 import time
 import io
 import threading
-import ssl
 
 import schedule
 from pystray import Icon, Menu, MenuItem
 from PIL import Image, ImageEnhance
 import requests
-from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.poolmanager import PoolManager
 from bs4 import BeautifulSoup
 from win11toast import notify
 
