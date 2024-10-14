@@ -62,7 +62,7 @@ class taskTray:
                     if len(tables) >= 2:
                         stat = tables[1].find_all('tr')[-1].find_all('td')[0].text.strip()
                         title = f'{code} {stat}'
-                        if stat == '配達済み':
+                        if stat == '⇒配達完了':
                             if self.notified is False:
                                 self.notified = True
                                 notify(
