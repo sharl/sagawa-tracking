@@ -54,7 +54,8 @@ class taskTray:
                     value = inp.get('value')
                     data[name] = value if value else ''
                 data['main:no1'] = code
-                del data['main:_id43']
+                if 'main:_id43' in data:
+                    del data['main:_id43']
 
                 with requests.post(url, data=data) as r:
                     soup = BeautifulSoup(r.content, 'html.parser')
